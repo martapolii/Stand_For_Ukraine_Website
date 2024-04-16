@@ -337,11 +337,11 @@ footer a:visited {
   color: aliceblue;
 }
 
-/* Media query for smaller screen sizes */
+/* Media query for tablet and mobile */
 @media only screen and (max-width: 800px) {
   .banner {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center horizontally */
   }
 
   .caption {
@@ -351,14 +351,14 @@ footer a:visited {
   }
 
   .bannertext {
-    position: static; /* Reset position */
-    margin: 10px 0; /* Add margin for spacing */
+    position: static; 
+    margin: 10px 0; 
     font-size:x-small;
   }
 
   .learnmore {
-    position: static; /* Reset position */
-    margin-top: 0px; /* Add margin for spacing */
+    position: static; 
+    margin-top: 0px; 
     font-size:x-small;
   }
 
@@ -367,13 +367,13 @@ footer a:visited {
 }
 
   .grid-nav {
-    margin-top: 0px; /* Add margin to separate from banner */
+    margin-top: 0px; 
     font-size:x-small;
   }
 
   
   header{
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; /* stack vertically */
     align-items: center;
   }
 
