@@ -338,7 +338,23 @@ footer a:visited {
 }
 
 /* Media query for tablet and mobile */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1250px){
+
+  .bannertext{
+    top: 40%;
+  }
+
+  .bannertext h1{
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  h1{
+    padding-top: 5%;
+  }
+
   .banner {
     flex-direction: column; /* stack vertically */
     align-items: center; /* center horizontally */
@@ -356,6 +372,21 @@ footer a:visited {
     font-size:x-small;
   }
 
+  blockquote {
+    font-size: 1em;
+    min-width: 300px;
+    margin-left: 10%;
+  }
+
+  body {
+      min-width: 320px;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+.maininfo
+{
+  font-size: smaller;
+}
   .learnmore {
     position: static; 
     margin-top: 0px; 
@@ -365,12 +396,10 @@ footer a:visited {
   .grid-nav ul{
     grid-auto-rows:minmax(100px,auto);
 }
-
   .grid-nav {
     margin-top: 0px; 
     font-size:x-small;
   }
-
   
   header{
     flex-direction: column; /* stack vertically */
@@ -381,5 +410,10 @@ footer a:visited {
     font-size: 1em;
   }
 
+  footer{
+    padding-top:4px;
+    padding-bottom: 3px;
+    font-size: xx-small;
+  }
 
 }
