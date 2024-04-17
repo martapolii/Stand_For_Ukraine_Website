@@ -7,24 +7,25 @@
 
 html{
   height: 100%;
+  min-width: 220px;
 }
 
 header, main, nav, footer, figure, figcaption, aside, section, article {display:block}
 
-/* tablet and mobile display*/
 
 
+/*General*/
 body {
   font-family: Arial, sans-serif;
   background-color: #111111;
   color: whitesmoke;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
-
 }
 
+/* Header */
 header {
   height: 20%;
   display: flex;
@@ -32,80 +33,79 @@ header {
   border-bottom: 1px solid rgb(120, 120, 120);
   border-top: 1px solid rgb(120, 120, 120);
   justify-content: center;
+  align-items: center; /*centers VERTICALLY!!!!!*/
+  width: 100%;
 }
-
 .header-content {
-  flex:1;
+  flex:9;
   margin-left: 2%;
-  display: inline-block;
-  font-size: 2em;
+  font-size: 2.3vw;
   font-variant: small-caps;
-  /* background: linear-gradient(to bottom, #002d5d, #61adfe, #fff700);
-  -webkit-background-clip: text; Apply gradient to text
-  background-clip: text; */
-  color: transparent;
   color: rgb(255, 255, 255);
-  padding-left: 2%;
+  padding: 0.8%;
 }
-
 header a {
-  display: inline-block;
+  flex: 1.5;
+  vertical-align: middle;
   color: rgb(171, 171, 171);
   text-decoration: none;
-  font-size:larger;
-  margin: 1%;
-  padding: 1%;
-  overflow-wrap: break-word;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  margin-right: 2%;
 }
-
-header a:hover{
+span.backtohome{
+  padding: 10%;
+}
+span.backtohome:hover {
   background-color: rgba(229, 229, 229, 0.121);
   border-radius: 5px;
-
+  transition: background-color 0.2s linear;
 }
 
-/* BANNER */
+/* BANNER */ 
+
 .banner {
-  display: flex;
   position: relative;
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: auto;
-  width: 100%;
   border-bottom: 1px solid rgb(120, 120, 120);
 }
 .banner img{
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  z-index: 1;
 }
 .bannertext {
+  z-index: 2;
   position: absolute;
-  top: 30%;
-  left: 60%;
-  margin-right: 20px;
-  height: auto;
+  display: block;
+  left: 60vw;
+  right: 2vw;
 }
 .bannertext h1 {
   color: rgb(0, 0, 0);
   background-color: rgba(255, 221, 2, 0.7);
-  padding: 5px;
-  font-size: 300%;
+  padding: 7px;
+  font-size: 3.5vw;
   overflow-wrap: break-word;
   margin: 5px 0;
 }
 .caption {
-  display: block;
+  z-index: 3;
   position: absolute;
-  top:75%;
-  left:60%;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 5px;
-  margin-right: 15px;
+}
+.caption p{
+  font-size: 1.2vw;
+  padding: 1%;
   color:#cdcdcd;
   background-color: rgba(0, 0, 0, 0.4);
+  overflow-wrap: break-word;
 }
+
 .learnmore {
-  position: absolute;
   top: 91%;
   color: whitesmoke;
   text-align: center;
@@ -174,12 +174,18 @@ header a:hover{
 
 .grid-nav li span:hover {
   background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s linear;
 }
-
 .grid-nav li a:hover{
   font-weight: bolder;
 }
-
+.grid-nav li span:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.4s linear;
+}
+.grid-nav li a:active{
+  font-weight: bolder;
+}
 .active a span {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -212,7 +218,7 @@ header a:hover{
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.1;
+  opacity: 0.04;
   z-index: -1;
 }
 
@@ -337,83 +343,4 @@ footer a:visited {
   color: aliceblue;
 }
 
-/* Media query for tablet and mobile */
-@media only screen and (max-width: 1250px){
-
-  .bannertext{
-    top: 40%;
-  }
-
-  .bannertext h1{
-    font-size: xx-large;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  h1{
-    padding-top: 5%;
-  }
-
-  .banner {
-    flex-direction: column; /* stack vertically */
-    align-items: center; /* center horizontally */
-  }
-
-  .caption {
-    position: static; 
-    margin: 10px 0; 
-    font-size:x-small;
-  }
-
-  .bannertext {
-    position: static; 
-    margin: 10px 0; 
-    font-size:x-small;
-  }
-
-  blockquote {
-    font-size: 1em;
-    min-width: 300px;
-    margin-left: 10%;
-  }
-
-  body {
-      min-width: 320px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-.maininfo
-{
-  font-size: smaller;
-}
-  .learnmore {
-    position: static; 
-    margin-top: 0px; 
-    font-size:x-small;
-  }
-
-  .grid-nav ul{
-    grid-auto-rows:minmax(100px,auto);
-}
-  .grid-nav {
-    margin-top: 0px; 
-    font-size:x-small;
-  }
-  
-  header{
-    flex-direction: column; /* stack vertically */
-    align-items: center;
-  }
-
-  .header-content{
-    font-size: 1em;
-  }
-
-  footer{
-    padding-top:4px;
-    padding-bottom: 3px;
-    font-size: xx-small;
-  }
-
-}
+ 
