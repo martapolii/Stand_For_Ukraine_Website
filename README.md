@@ -1,4 +1,4 @@
-This website was created as my final project for the course GNED137 "A Wellness Approach." We were given the option to use web-building websites, as the focus was on the content and not the website itself. I chose to apply my learning from my COMP213 "Web Interface Design" course to design a website from scratch, using VS Code, HTML and CSS. The goal was to create a visually appealing website that had a responsive design and functioned well on tablets and mobile devices. 
+This website was designed from scratch, using VS Code, HTML and CSS. The goal was to create a visually appealing website that had a responsive design and functioned well on tablets and mobile devices. 
 
 The project is a multi-page website aimed at raising awareness about the Russian invasion of Ukraine and its impact on Ukrainians. The site provides detailed information on stress, disorders, management techniques, resources, and ways to support those affected by the war.
 
